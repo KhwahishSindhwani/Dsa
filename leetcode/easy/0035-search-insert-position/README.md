@@ -46,16 +46,16 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-04T18:36:58.803Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.3 MB (beats 96.12%)  
+**Submitted:** 2026-07-04T18:38:14.644Z  
 
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int index = floor(nums,target);
         if (index == -1){
-            return nums[0];
+            return 0;
         }else if (nums[index] == target) {
             return index;
         }
