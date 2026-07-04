@@ -2,7 +2,7 @@ class Solution {
     public int searchInsert(int[] nums, int target) {
         int index = floor(nums,target);
         if (index == -1){
-            return 0;
+            return nums[0];
         }else if (nums[index] == target) {
             return index;
         }
