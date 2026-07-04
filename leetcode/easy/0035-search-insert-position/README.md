@@ -47,16 +47,19 @@ Output: 4
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-04T18:33:23.832Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-07-04T18:36:41.864Z  
 
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        if (floor(nums, target) == -1){
+        int index = floor(nums,target);
+        if (index == -1){
             return nums[0];
+        }else if (nums[index] == target) {
+            return index;
         }
-        return floor(nums,target)+1;
+        return index+1;
     }
     static int floor(int [] nums , int target ){
         int start = 0;
