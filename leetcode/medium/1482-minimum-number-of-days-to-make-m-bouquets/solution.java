@@ -38,6 +38,7 @@ class Solution {
                 if(count == k){
                     bouquet++;
                     count = 0;
+                    return true;
                 }
         
             }
@@ -46,7 +47,7 @@ class Solution {
             }
             
         }
-        return bouquet >= m; 
+        return false; 
 
     }
 }
