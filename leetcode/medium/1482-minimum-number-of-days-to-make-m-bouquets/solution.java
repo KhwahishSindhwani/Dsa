@@ -16,7 +16,7 @@ class Solution {
         int low = minDay, high = maxDay, result = -1;
 
         while (low <= high) {
-            int mid = (low + high) / 2;
+            int mid = low + (high - low) / 2;
             if (ifBloomed(bloomDay, mid, m, k)) {
                 result = mid; // possible to form bouquets, try earlier
                 high = mid - 1;
