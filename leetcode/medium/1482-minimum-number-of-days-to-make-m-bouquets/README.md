@@ -64,8 +64,8 @@ It is obvious that we can make two bouquets in different ways.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-05T17:17:14.238Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-07-05T17:15:39.539Z  
 
 ```java
 class Solution {
@@ -86,7 +86,7 @@ class Solution {
         int low = minDay, high = maxDay, result = -1;
 
         while (low <= high) {
-            int mid = low + (high - low) / 2;
+            int mid = (low + high) / 2;
             if (ifBloomed(bloomDay, mid, m, k)) {
                 result = mid; // possible to form bouquets, try earlier
                 high = mid - 1;
@@ -105,7 +105,7 @@ class Solution {
         for(int i =0; i < bloomDay.length; i++){
             if (bloomDay[i] >= day ){
                 count++;
-                if(count == k){
+                if(count >= k){
                     bouquet++;
                     count = 0;
                     return true;
