@@ -64,8 +64,8 @@ It is obvious that we can make two bouquets in different ways.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-05T14:24:01.716Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-07-05T17:14:59.784Z  
 
 ```java
 class Solution {
@@ -108,6 +108,7 @@ class Solution {
                 if(count == k){
                     bouquet++;
                     count = 0;
+                    return true;
                 }
         
             }
@@ -116,7 +117,7 @@ class Solution {
             }
             
         }
-        return bouquet >= m; 
+        return false; 
 
     }
 }
