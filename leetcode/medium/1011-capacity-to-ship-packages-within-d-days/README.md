@@ -64,13 +64,13 @@ Explanation:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-06T09:08:03.261Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-07-06T09:08:42.276Z  
 
 ```java
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-        int low = Integer.MAX_VALUE;
+        int low = Integer.MIN_VALUE;
         int high = 0 ;
         for(int weight : weights){
             low = Math.max(low,weight);
