@@ -24,15 +24,13 @@ class Solution {
         int requiredDays = 1; 
         for (int weight : weights){
 
-            if (currentLoad + weight <= load){
-                currentLoad += weight;
+             currentLoad = currentLoad + weight;
+            if (currentLoad > load){
+                requiredDays++;
+                currentLoad = weight;
             }
-            else {
 
-            requiredDays++;
-            currentLoad = weight;
-
-            if (requiredDays > days)
+            if (requiredDays > days){
                 return false;
             }
         }
