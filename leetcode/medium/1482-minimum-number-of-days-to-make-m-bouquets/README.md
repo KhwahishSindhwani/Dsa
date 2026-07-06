@@ -63,9 +63,9 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 17 ms (beats 73.55%)  
-**Memory:** 82.7 MB (beats 46.58%)  
-**Submitted:** 2026-07-06T01:47:34.688Z  
+**Runtime:** 0 ms  
+**Memory:** 42.1 MB  
+**Submitted:** 2026-07-06T01:53:01.839Z  
 
 ```java
 class Solution {
@@ -80,20 +80,27 @@ class Solution {
             end = Math.max(end, i);
             
         }
-        int ans =-1 ;
+        //m1
+        //int ans =-1 ;
+        //m2
+        if (k*m < bloomDay.length){
+            return -1;
+        }
 
         while(start <= end){
             int mid = start + (end - start ) /2;
 
             if (isMade(bloomDay, m, k, mid)){
-                ans = mid ;
+                //m1
+                //ans = mid ;
+                //m2
                 end = mid -1;
             }
             else{
                 start = mid +1;
             }
         }
-        return ans;
+        return start;
         
     }
     public static boolean isMade(int[] bloomDay, int m, int k, int day){
