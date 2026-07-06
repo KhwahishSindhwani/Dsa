@@ -41,9 +41,9 @@ Output: 44
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 84.69%)  
-**Memory:** 51 MB (beats 72.91%)  
-**Submitted:** 2026-07-06T08:20:45.900Z  
+**Runtime:** 8 ms (beats 63.51%)  
+**Memory:** 51.1 MB (beats 32.84%)  
+**Submitted:** 2026-07-06T08:19:29.189Z  
 
 ```java
 class Solution {
@@ -70,17 +70,19 @@ class Solution {
     static boolean isDivisor(int [] nums, int threshold, int divisor){
 
         int sumResult = 0;
-       
+        boolean is = false;
         for(int num : nums){
             //celling as there is approx equal to oe greater then
             sumResult = sumResult + (num + divisor -1)/divisor;
 
             if (sumResult > threshold){
-                  return false;
+                is = false;
             }
-            
+            else {
+                is = true;
+            }
         }
-       return true; 
+       return is; 
     }
 }
 ```
