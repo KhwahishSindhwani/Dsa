@@ -47,8 +47,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-06T18:04:05.109Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-07-06T19:42:57.710Z  
 
 ```java
 class Solution {
@@ -80,7 +80,7 @@ class Solution {
             high = mid-1;
         }
       }
-      return low+1;
+      return k+high+1;
 
     }
     
