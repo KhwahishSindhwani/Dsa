@@ -13,7 +13,7 @@ class Solution {
         num ++;}
        } 
 
-       while(k-- == 0){
+       while(k-- >= 0){
         num++;
        }
        return num-1;
