@@ -1,9 +1,9 @@
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
-        int start = Integer.MAX_VALUE;
+        int start = 1;
         int end = Integer.MIN_VALUE;
         for(int num : nums){
-            start = Math.min(start, num);
+          
             end = Math.max(end, num);
         }
         while(start <= end){
