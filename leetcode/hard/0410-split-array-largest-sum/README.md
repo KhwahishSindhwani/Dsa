@@ -44,8 +44,8 @@ The best way is to split it into [1,2,3] and [4,5], where the largest sum among 
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-06T22:24:56.508Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-07-06T22:26:44.705Z  
 
 ```java
 class Solution {
@@ -55,7 +55,7 @@ class Solution {
         int end = 0;
         for(int i : nums){
             start = Math.max(start, i);
-            end =+ i;
+            end += i;
         }
 
         while(start <= end){
@@ -77,7 +77,7 @@ class Solution {
         for (int num : nums){
 
             if ( ( value + num ) <= checkValue){
-                value =+ num;
+                value += num;
             }else{
                 cA++;
                 value = num;
