@@ -5,7 +5,7 @@ class Solution {
         int end = 0;
         for(int i : nums){
             start = Math.max(start, i);
-            end =+ i;
+            end += i;
         }
 
         while(start <= end){
@@ -27,7 +27,7 @@ class Solution {
         for (int num : nums){
 
             if ( ( value + num ) <= checkValue){
-                value =+ num;
+                value += num;
             }else{
                 cA++;
                 value = num;
