@@ -65,7 +65,7 @@ It is obvious that we can make two bouquets in different ways.
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.4 MB  
-**Submitted:** 2026-07-06T01:45:06.462Z  
+**Submitted:** 2026-07-06T01:47:27.100Z  
 
 ```java
 class Solution {
@@ -80,7 +80,7 @@ class Solution {
             end = Math.max(end, i);
             
         }
-        int ans =0 ;
+        int ans =-1 ;
 
         while(start <= end){
             int mid = start + (end - start ) /2;
