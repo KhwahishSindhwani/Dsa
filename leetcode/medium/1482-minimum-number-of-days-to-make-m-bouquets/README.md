@@ -63,9 +63,9 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-06T01:53:39.930Z  
+**Runtime:** 16 ms (beats 91.58%)  
+**Memory:** 82.6 MB (beats 65.36%)  
+**Submitted:** 2026-07-06T01:54:46.688Z  
 
 ```java
 class Solution {
@@ -83,7 +83,7 @@ class Solution {
         //m1
         //int ans =-1 ;
         //m2
-        if (k*m > bloomDay.length){
+        if ((long)k*m > bloomDay.length){
             return -1;
         }
 
