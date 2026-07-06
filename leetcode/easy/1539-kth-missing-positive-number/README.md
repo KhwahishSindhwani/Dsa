@@ -47,29 +47,21 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-06T16:59:59.177Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-07-06T17:42:13.184Z  
 
 ```java
 class Solution {
     public int findKthPositive(int[] arr, int k) {
-       int num = 1;
-       int n = arr.length;
-       int i =0;
-       while(i<n && k>0){
-
-        if (arr[i] == num){
-            i++;
+      
+      for (int no : arr){
+        if(no <= k){
+            k++;
         }else{
-            k--;
-        
-        num ++;}
-       } 
-
-       while(k-- >= 0){
-        num++;
-       }
-       return num-1;
+        break;
+      }
+      } 
+      return k;
     }
     
 }
