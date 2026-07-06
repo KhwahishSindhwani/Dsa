@@ -47,8 +47,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-06T11:15:18.236Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-07-06T11:15:43.606Z  
 
 ```java
 class Solution {
@@ -66,7 +66,7 @@ class Solution {
         num ++;}
        } 
 
-       while(k-- == 0){
+       while(k-- >= 0){
         num++;
        }
        return num-1;
