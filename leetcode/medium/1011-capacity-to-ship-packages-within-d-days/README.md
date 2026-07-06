@@ -63,9 +63,9 @@ Explanation:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 12 ms (beats 28.16%)  
-**Memory:** 50.2 MB (beats 56.38%)  
-**Submitted:** 2026-07-06T09:08:50.819Z  
+**Runtime:** 0 ms  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-07-06T09:14:02.104Z  
 
 ```java
 class Solution {
@@ -94,15 +94,13 @@ class Solution {
         int requiredDays = 1; 
         for (int weight : weights){
 
-            if (currentLoad + weight <= load){
-                currentLoad += weight;
+             currentLoad = currentLoad + weight;
+            if (currentLoad > load){
+                requiredDays++;
+                currentLoad = weight;
             }
-            else {
 
-            requiredDays++;
-            currentLoad = weight;
-
-            if (requiredDays > days)
+            if (requiredDays > days){
                 return false;
             }
         }
