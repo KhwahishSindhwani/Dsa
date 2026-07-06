@@ -10,7 +10,7 @@ class Solution {
             end = Math.max(end, i);
             
         }
-        int ans =0 ;
+        int ans =-1 ;
 
         while(start <= end){
             int mid = start + (end - start ) /2;
