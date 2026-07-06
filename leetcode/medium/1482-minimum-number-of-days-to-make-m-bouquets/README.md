@@ -63,9 +63,9 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-07-06T01:47:27.100Z  
+**Runtime:** 17 ms (beats 73.55%)  
+**Memory:** 82.7 MB (beats 46.58%)  
+**Submitted:** 2026-07-06T01:47:34.688Z  
 
 ```java
 class Solution {
