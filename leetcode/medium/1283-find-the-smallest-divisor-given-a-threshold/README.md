@@ -43,15 +43,15 @@ Output: 44
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.3 MB  
-**Submitted:** 2026-07-06T08:16:04.387Z  
+**Submitted:** 2026-07-06T08:19:18.582Z  
 
 ```java
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
-        int start = Integer.MAX_VALUE;
+        int start = 1;
         int end = Integer.MIN_VALUE;
         for(int num : nums){
-            start = Math.min(start, num);
+          
             end = Math.max(end, num);
         }
         while(start <= end){
