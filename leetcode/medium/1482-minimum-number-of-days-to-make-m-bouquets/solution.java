@@ -13,7 +13,7 @@ class Solution {
         //m1
         //int ans =-1 ;
         //m2
-        if (k*m > bloomDay.length){
+        if ((long)k*m > bloomDay.length){
             return -1;
         }
 
