@@ -1,53 +1,51 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        long required = (long) m * k;
-        if (required > bloomDay.length) return -1; // not enough flowers
 
-        int minDay = Integer.MAX_VALUE;
-        int maxDay = Integer.MIN_VALUE;
+        int start = Integer.MAX_VALUE;
+        int end = Integer.MIN_VALUE;
 
-        // Find the minimum and maximum bloom day
-        for (int bloom : bloomDay) {
-            minDay = Math.min(minDay, bloom);
-            maxDay = Math.max(maxDay, bloom);
-        }
+        for (int i : bloomDay){
 
-        // Binary search between minDay and maxDay
-        int low = minDay, high = maxDay, result = -1;
-
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (ifBloomed(bloomDay, mid, m, k)) {
-                result = mid; // possible to form bouquets, try earlier
-                high = mid - 1;
-            } else {
-                low = mid + 1; // need more days
-            }
-        }
-
-        return result;
-    }
-    // check if flower is bloom 
-    public static boolean ifBloomed(int [] bloomDay, int day, int m, int k){
-        int count = 0;
-        int bouquet =0;
-
-        for(int i =0; i < bloomDay.length; i++){
-            if (bloomDay[i] >= day ){
-                count++;
-                if(count >= k){
-                    bouquet++;
-                    count = 0;
-                    return true;
-                }
-        
-            }
-            else{
-                count =0;
-            }
+            start = Math.min(start, i);
+            end = Math.max(end, i);
             
         }
-        return false; 
+        int ans =0 ;
 
+        while(start <= end){
+            int mid = start + (end - start ) /2;
+
+            if (isMade(bloomDay, m, k, mid)){
+                ans = mid ;
+                end = mid -1;
+            }
+            else{
+                start = mid +1;
+            }
+        }
+        return ans;
+        
+    }
+    public static boolean isMade(int[] bloomDay, int m, int k, int day){
+        int bloomed = 0;
+        int bouquet = 0;
+
+        for (int fDay : bloomDay){
+
+            if (fDay <= day ){
+                bloomed++;
+                if (bloomed == k){
+                    bouquet++;
+                    bloomed = 0;
+                    if (bouquet >= m){
+                        return true;
+                    }
+                }            
+            }
+            else {
+                bloomed = 0;
+            }
+        }
+        return false;
     }
 }
