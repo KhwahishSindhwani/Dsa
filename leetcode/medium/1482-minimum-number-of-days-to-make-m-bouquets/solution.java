@@ -10,20 +10,27 @@ class Solution {
             end = Math.max(end, i);
             
         }
-        int ans =-1 ;
+        //m1
+        //int ans =-1 ;
+        //m2
+        if (k*m < bloomDay.length){
+            return -1;
+        }
 
         while(start <= end){
             int mid = start + (end - start ) /2;
 
             if (isMade(bloomDay, m, k, mid)){
-                ans = mid ;
+                //m1
+                //ans = mid ;
+                //m2
                 end = mid -1;
             }
             else{
                 start = mid +1;
             }
         }
-        return ans;
+        return start;
         
     }
     public static boolean isMade(int[] bloomDay, int m, int k, int day){
