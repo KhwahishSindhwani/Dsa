@@ -43,11 +43,58 @@ The best way is to split it into [1,2,3] and [4,5], where the largest sum among 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 30.99%)  
-**Memory:** 42.9 MB (beats 84.12%)  
-**Submitted:** 2026-07-06T22:10:19.637Z  
+**Runtime:** 0 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-07-06T22:24:56.508Z  
 
 ```java
+class Solution {
+    public int splitArray(int[] nums, int k) {
+
+        int start = 0; 
+        int end = 0;
+        for(int i : nums){
+            start = Math.max(start, i);
+            end =+ i;
+        }
+
+        while(start <= end){
+            int mid = start + (end - start) / 2;
+
+            if(isSub(nums, k, mid)){
+                end = mid -1;
+            } else{
+                start = mid +1;
+            }
+
+        }
+        return start;
+    }
+
+    public static boolean isSub(int [] nums, int k, int checkValue){
+        int cA = 1; // cA: current array
+        int value = 0;
+        for (int num : nums){
+
+            if ( ( value + num ) <= checkValue){
+                value =+ num;
+            }else{
+                cA++;
+                value = num;
+
+                if (cA > k){
+                    return false;
+                }
+            }
+        }
+        return true ;
+    }
+
+}
+
+
+
+/*
 class Solution {
     public int splitArray(int[] nums, int k) {
         int start = 0;
@@ -85,6 +132,7 @@ class Solution {
     }
   
 }
+*/
 ```
 
 ---
