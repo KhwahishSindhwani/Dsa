@@ -46,9 +46,9 @@ Could you solve this problem in less than O(n) complexity?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.6 MB (beats 39.97%)  
-**Submitted:** 2026-07-06T17:42:32.716Z  
+**Runtime:** 0 ms  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-07-06T17:44:43.716Z  
 
 ```java
 class Solution {
