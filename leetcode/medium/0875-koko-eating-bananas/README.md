@@ -50,8 +50,8 @@ Output: 23
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-07-06T01:15:07.523Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-07-06T01:18:49.024Z  
 
 ```java
 class Solution {
@@ -90,7 +90,7 @@ class Solution {
             
             // celing of no :
             hour = hour + (pile + speed - 1 ) / speed;
-            if (hour < h){
+            if (hour <= h){
                 return true;
             }
         }
