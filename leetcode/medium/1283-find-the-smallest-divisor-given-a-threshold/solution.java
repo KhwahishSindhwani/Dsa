@@ -22,17 +22,18 @@ class Solution {
     static boolean isDivisor(int [] nums, int threshold, int divisor){
 
         int sumResult = 0;
+        boolean is = false;
         for(int num : nums){
             //celling as there is approx equal to oe greater then
             sumResult = sumResult + (num + divisor -1)/divisor;
 
             if (sumResult > threshold){
-                return false;
+                is = false;
             }
             else {
-                return true;
+                is = true;
             }
         }
-       return false; 
+       return is; 
     }
 }
