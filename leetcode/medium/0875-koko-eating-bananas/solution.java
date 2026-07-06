@@ -34,7 +34,7 @@ class Solution {
             
             // celing of no :
             hour = hour + (pile + speed - 1 ) / speed;
-            if (hour < h){
+            if (hour <= h){
                 return true;
             }
         }
