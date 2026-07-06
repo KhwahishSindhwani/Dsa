@@ -27,7 +27,7 @@ class Solution {
             high = mid-1;
         }
       }
-      return low+1;
+      return k+high+1;
 
     }
     
