@@ -41,17 +41,15 @@ Explanation: 2 does not exist in nums so return -1
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-07-09T17:52:46.662Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-07-09T17:52:03.054Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) {
         int start = 0;
         int end = nums.length-1;
-        if (nums.length == 0){
-            return -1;
-        }
+        
 
         while(start <= end){
             int mid = start + ( end - start ) / 2;
