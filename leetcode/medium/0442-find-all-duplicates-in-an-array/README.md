@@ -46,9 +46,9 @@ Output: []
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-07-15T19:57:08.347Z  
+**Runtime:** 6 ms (beats 90.54%)  
+**Memory:** 57.4 MB (beats 92.23%)  
+**Submitted:** 2026-07-15T19:59:43.240Z  
 
 ```java
 class Solution {
@@ -57,7 +57,7 @@ class Solution {
         while (i < nums.length){
             int correct = nums[i] -1;
             if (nums[i] != nums[correct]){
-                swap(nums, correct, i);
+                swap(nums, i, correct);
             }
             else {
                 i++;
