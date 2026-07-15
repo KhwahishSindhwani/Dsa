@@ -5,7 +5,6 @@ class Solution {
         while(i < nums.length){
              correct = i -1;
              if(nums[i] == 0){
-                i++;
                 break;
              }
             if (nums[i] != correct ){
