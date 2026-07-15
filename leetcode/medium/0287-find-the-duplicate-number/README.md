@@ -55,8 +55,8 @@ Output: 3
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-15T19:41:34.457Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-07-15T19:42:19.296Z  
 
 ```java
 class Solution {
@@ -72,8 +72,8 @@ class Solution {
             }
         }
         for (int index = 0; index<nums.length; index++){
-            if (nums[index] != index){
-                return index;
+            if (nums[index] != index +1){
+                return nums[index];
             }
         }
         return -1;
