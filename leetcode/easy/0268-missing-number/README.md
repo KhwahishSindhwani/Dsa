@@ -63,7 +63,7 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-07-15T17:34:03.361Z  
+**Submitted:** 2026-07-15T17:33:05.274Z  
 
 ```java
 class Solution {
@@ -73,7 +73,6 @@ class Solution {
         while(i < nums.length){
              correct = i -1;
              if(nums[i] == 0){
-                i++;
                 break;
              }
             if (nums[i] != correct ){
