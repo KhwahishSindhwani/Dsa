@@ -16,7 +16,7 @@ class Solution {
                 return index+1;
             }
         }
-        return -1;
+        return nums.length+1;
     }
     void swap (int [] nums, int first , int second ){
         int temp = nums[first];
