@@ -62,8 +62,8 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 29.87%)  
-**Memory:** 47.6 MB (beats 14.05%)  
-**Submitted:** 2026-07-15T18:05:12.036Z  
+**Memory:** 47 MB (beats 95.73%)  
+**Submitted:** 2026-07-15T18:07:40.321Z  
 
 ```java
 class Solution {
@@ -93,6 +93,18 @@ class Solution {
 
     }
 }
+// bit manupution
+/*
+class Solution {
+    public int missingNumber(int[] nums) {
+     int ans = nums.length;
+     for(int i=0;i<nums.length;i++){
+        ans = ans ^ i ^ nums[i];
+     }
+     return ans;
+    }
+}
+*/
 ```
 
 ---
