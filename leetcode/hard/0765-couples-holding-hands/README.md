@@ -42,31 +42,51 @@ Explanation: All couples are already seated side by side.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-15T20:34:48.324Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.7 MB (beats 76.05%)  
+**Submitted:** 2026-07-15T20:41:26.173Z  
 
 ```java
 class Solution {
     public int minSwapsCouples(int[] row) {
-        int i = 0;
-        int count = 0 ;
-        while (i < row.length){
-            int correct = row[i];
-            if (row[i] != row[correct]){
-                swap(row, i, correct);
-                count ++;
+
+        int swaps = 0;
+
+        for (int i = 0; i < row.length; i += 2) {
+
+            // Find the expected partner
+            int partner;
+            if (row[i] % 2 == 0) {
+                partner = row[i] + 1;
+            } else {
+                partner = row[i] - 1;
             }
-            else {
-                i++;
+
+            // Partner is already sitting next to them
+            if (row[i + 1] == partner) {
+                continue;
             }
+
+            // Find the partner using linear search
+            int j;
+            for (j = i + 2; j < row.length; j++) {
+                if (row[j] == partner) {
+                    break;
+                }
+            }
+
+            // Swap partner into the correct seat
+            swap(row, i + 1, j);
+            swaps++;
         }
-        return count;
+
+        return swaps;
     }
-    void swap (int [] nums, int first , int second ){
-        int temp = nums[first];
-    nums[first] = nums[second];
-    nums[second] = temp;
+
+    void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }
 ```
