@@ -2,6 +2,25 @@ class Solution {
     public int findDuplicate(int[] nums) {
         int i = 0;
         while (i < nums.length){
+            if (nums[i] != i){
+            int correct = nums[i] -1;
+            if (nums[i] != nums[correct]){
+                swap(nums, correct, i);
+            }
+            else {
+                return nums[i];
+            }
+            }else {
+                i++;
+            }
+        }
+        
+        return -1;
+    }
+/*class Solution {
+    public int findDuplicate(int[] nums) {
+        int i = 0;
+        while (i < nums.length){
             int correct = nums[i] -1;
             if (nums[i] != nums[correct]){
                 swap(nums, correct, i);
@@ -16,7 +35,7 @@ class Solution {
             }
         }
         return -1;
-    }
+    }*/
     void swap (int [] nums, int first , int second ){
         int temp = nums[first];
     nums[first] = nums[second];
