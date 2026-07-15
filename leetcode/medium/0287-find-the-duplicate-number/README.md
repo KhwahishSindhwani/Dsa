@@ -54,12 +54,33 @@ Output: 3
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-15T19:46:44.470Z  
+**Runtime:** 5 ms (beats 60.89%)  
+**Memory:** 82.9 MB (beats 58.20%)  
+**Submitted:** 2026-07-15T19:52:22.637Z  
 
 ```java
 class Solution {
+    public int findDuplicate(int[] nums) {
+
+        int i = 0;
+
+        while (i < nums.length) {
+
+            int correct = nums[i] - 1;
+
+            if (nums[i] != nums[correct]) {
+                swap(nums, i, correct);
+            } else {
+                if (i != correct) {
+                    return nums[i];
+                }
+                i++;
+            }
+        }
+
+        return -1;
+    }
+/*class Solution {
     public int findDuplicate(int[] nums) {
         int i = 0;
         while (i < nums.length){
@@ -77,7 +98,7 @@ class Solution {
         }
         
         return -1;
-    }
+    }*/
 /*class Solution {
     public int findDuplicate(int[] nums) {
         int i = 0;
