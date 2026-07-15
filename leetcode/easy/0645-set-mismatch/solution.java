@@ -14,7 +14,7 @@ class Solution {
         for (int index = 0; index<nums.length; index++){
             if (nums[index] != index +1){
                 ans[0] = nums[index];
-                ans[1] = index;
+                ans[1] = index+1;
             }
         }
         return ans;
