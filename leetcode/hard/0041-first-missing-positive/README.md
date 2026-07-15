@@ -47,9 +47,9 @@ Explanation: The smallest positive integer 1 is missing.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-07-15T20:26:19.397Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 71.2 MB (beats 73.36%)  
+**Submitted:** 2026-07-15T20:28:08.400Z  
 
 ```java
 class Solution {
@@ -70,7 +70,7 @@ class Solution {
                 return index+1;
             }
         }
-        return -1;
+        return nums.length+1;
     }
     void swap (int [] nums, int first , int second ){
         int temp = nums[first];
