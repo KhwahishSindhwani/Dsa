@@ -39,8 +39,8 @@ Output: [1,2]
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-15T20:05:02.490Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-07-15T20:05:43.596Z  
 
 ```java
 class Solution {
@@ -59,7 +59,7 @@ class Solution {
         for (int index = 0; index<nums.length; index++){
             if (nums[index] != index +1){
                 ans[0] = nums[index];
-                ans[1] = index;
+                ans[1] = index+1;
             }
         }
         return ans;
